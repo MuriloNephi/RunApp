@@ -3,35 +3,224 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/bg_dark"
+    android:paddingTop="8dp"
+    android:paddingBottom="6dp">
 
+    <!-- Ícone do corredor -->
+    <ImageView
+        android:id="@+id/imgRunner"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_run"
+        android:contentDescription="@string/runner_icon_desc" />
+
+    <!-- Título -->
     <TextView
         android:id="@+id/txtTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Titulo"
-        android:textSize="18sp"
+        android:text="@string/titulo_run"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginTop="2dp" />
 
+    <!-- Subtítulo / Status -->
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_pronto"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp"
+        android:layout_marginTop="1dp" />
+
+    <!-- Botão Play/Stop circular -->
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/circle_button_bg"
+        android:drawableTop="@drawable/ic_play"
+        android:text=""
+        android:layout_marginTop="8dp"
+        android:elevation="4dp"
+        android:contentDescription="@string/btn_play_desc" />
+
+    <!-- Estatísticas: Distância | Tempo | Frequência -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center_vertical">
+
+        <!-- Distância -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_location"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_distancia"
+                android:textColor="@color/text_secondary"
+                android:textSize="8sp"
+                android:letterSpacing="0.05"
+                android:layout_marginTop="1dp" />
+
+            <TextView
+                android:id="@+id/txtDistancia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/valor_distancia_inicial"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unidade_km"
+                android:textColor="@color/text_secondary"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+        <!-- Divisória -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:background="@color/divider" />
+
+        <!-- Tempo -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_stopwatch"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_tempo"
+                android:textColor="@color/text_secondary"
+                android:textSize="8sp"
+                android:letterSpacing="0.05"
+                android:layout_marginTop="1dp" />
+
+            <TextView
+                android:id="@+id/txtTempo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/valor_tempo_inicial"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unidade_min"
+                android:textColor="@color/text_secondary"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+        <!-- Divisória -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:background="@color/divider" />
+
+        <!-- Frequência Cardíaca -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_heart"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_freq"
+                android:textColor="@color/text_secondary"
+                android:textSize="8sp"
+                android:letterSpacing="0.05"
+                android:layout_marginTop="1dp" />
+
+            <TextView
+                android:id="@+id/txtFreq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/valor_freq_inicial"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unidade_bpm"
+                android:textColor="@color/text_secondary"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Indicador de páginas -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center">
 
-        <Button
-            android:id="@+id/btnPlay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Play"/>
+        <ImageView
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:src="@drawable/dot_active"
+            android:contentDescription="@null" />
 
-        <Button
-            android:id="@+id/btnStop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Stop"
-            android:layout_marginStart="8dp"/>
+        <ImageView
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:src="@drawable/dot_inactive"
+            android:layout_marginStart="4dp"
+            android:contentDescription="@null" />
+
+        <ImageView
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:src="@drawable/dot_inactive"
+            android:layout_marginStart="4dp"
+            android:contentDescription="@null" />
 
     </LinearLayout>
 

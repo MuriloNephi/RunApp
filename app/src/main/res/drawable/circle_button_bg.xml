@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Anel externo (borda brilhante) -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Anel azul brilhante (borda externa) -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/blue_ring" />
+        </shape>
+    </item>
+
+    <!-- Círculo azul escuro (relleno interno com 4dp de margem = largura do anel) -->
+    <item
+        android:left="3dp"
+        android:top="3dp"
+        android:right="3dp"
+        android:bottom="3dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="100%"
+                android:startColor="@color/blue_primary"
+                android:endColor="@color/blue_button_center" />
+        </shape>
+    </item>
+
+</layer-list>

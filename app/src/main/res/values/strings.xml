@@ -1,8 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- ── originais do template ── -->
     <string name="app_name">WearOSTemplate</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
     <string name="hello_world">From the Square world,\nHello, %1$s!</string>
+
+    <!-- ── tela principal ── -->
+    <string name="titulo_run">Run</string>
+    <string name="status_pronto">Let\'s go!</string>
+    <string name="status_correndo">● Corrida em andamento</string>
+
+    <string name="label_distancia">DISTANCE</string>
+    <string name="label_tempo">TIME</string>
+    <string name="label_freq">HEART RATE</string>
+
+    <string name="valor_distancia_inicial">0.00</string>
+    <string name="valor_tempo_inicial">00:00</string>
+    <string name="valor_freq_inicial">- -</string>
+
+    <string name="unidade_km">km</string>
+    <string name="unidade_min">min</string>
+    <string name="unidade_bpm">bpm</string>
+
+    <!-- Acessibilidade -->
+    <string name="runner_icon_desc">Ícone de corredor</string>
+    <string name="btn_play_desc">Iniciar corrida</string>
+    <string name="btn_stop_desc">Parar corrida</string>
 </resources>

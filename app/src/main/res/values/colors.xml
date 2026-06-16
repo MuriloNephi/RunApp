@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Plano de fundo escuro azul-marinho (tema do protótipo) -->
+    <color name="bg_dark">#0A0E2A</color>
+
+    <!-- Azul principal (botão, ícones, anel) -->
+    <color name="blue_primary">#1A56E8</color>
+    <color name="blue_light">#4D9FFF</color>
+    <color name="blue_ring">#3AACFF</color>
+    <color name="blue_button_center">#1444CC</color>
+
+    <!-- Textos -->
+    <color name="white">#FFFFFF</color>
+    <color name="text_secondary">#8AABCC</color>
+
+    <!-- Divisória entre colunas de stats -->
+    <color name="divider">#1E3A5F</color>
+
+    <!-- Indicadores de página -->
+    <color name="dot_active">#FFFFFF</color>
+    <color name="dot_inactive">#3A5070</color>
+</resources>
