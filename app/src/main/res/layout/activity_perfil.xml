@@ -1,21 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".presentation.PerfilActivity">
+    android:background="#050D2D">
 
-    <TextView
-        android:id="@+id/textViewPerfil"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Tela de Perfil"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="8dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👤"
+            android:textSize="40sp"
+            android:layout_marginTop="8dp"/>
 
+        <TextView
+            android:id="@+id/txtNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Atleta"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"/>
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estatísticas"
+            android:textColor="#4DA6FF"
+            android:textSize="12sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/txtTotalCorridas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total de corridas: 0"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"/>
+
+        <TextView
+            android:id="@+id/txtDistanciaTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distância total: 0.00 km"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:layout_marginTop="4dp"/>
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1A3CCC"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
